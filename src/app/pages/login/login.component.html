@@ -2,7 +2,7 @@
   <mat-card class="login-card">
     <mat-card-title class="login-card-title">登陆</mat-card-title>
     <mat-card-content>
-      <form class="login-form" [formGroup]="loginForm">
+      <form class="login-form" [formGroup]="loginForm" (submit)="submitForm()">
         <p>
           <mat-form-field class="login-form-item" appearance="outline">
             <mat-label>用户名</mat-label>
