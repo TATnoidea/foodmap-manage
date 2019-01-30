@@ -1,0 +1,39 @@
+$primary-color: #673ab7;
+
+.wrap {
+  padding-top: 200px;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: $primary-color;
+  .title {
+    color: #fff;
+  }
+  .login-card {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 15px;
+    .login-card-title {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 0;
+      &.login-row {
+        display: flex;
+        justify-content: space-around;
+        .login-btn {
+          min-width: 80px;
+        }
+      }
+      .login-form-item {
+        width: 100%;
+      }
+    }
+  }
+}
