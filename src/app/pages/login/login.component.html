@@ -1,9 +1,26 @@
-<!-- <div class="wrap">
-  <mat-form-field>
-    <input matInput placeholder="用户名">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="密码">
-  </mat-form-field>
-</div> -->
-123
+<div class="wrap">
+  <mat-card class="login-card">
+    <mat-card-title class="login-card-title">登陆</mat-card-title>
+    <mat-card-content>
+      <form class="login-form" [formGroup]="loginForm">
+        <p>
+          <mat-form-field class="login-form-item" appearance="outline">
+            <mat-label>用户名</mat-label>
+            <input formControlName="username" matInput placeholder="请输入用户名">
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="loginForm.get('username').errors">请输入用户名！</mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="login-form-item" appearance="outline">
+            <mat-label>密码</mat-label>
+            <input formControlName="password" matInput placeholder="请输入密码">
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-error *ngIf="loginForm.get('password').errors">请输入密码！</mat-error>
+          </mat-form-field>
+        </p>
+          <button mat-flat-button color="primary">登陆</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
